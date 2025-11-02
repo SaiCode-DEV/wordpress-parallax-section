@@ -9,15 +9,14 @@ class Menu {
 	}
 
 	public function adminMenu() {
-
-		add_submenu_page(
-			'tools.php',
-			__('Parallax Section', 'parallax-section'),
-			__('Parallax Section', 'parallax-section'),
-			'manage_options',
-			'parallax-section-dashboard',
-			[$this, 'renderDashboardPage'],
-			0
+		add_menu_page(
+			__('Parallax Section', 'parallax-section'), // Page title
+			__('Parallax Section', 'parallax-section'), // Menu title
+			'manage_options',                           // Capability
+			'parallax-section-dashboard',               // Menu slug
+			[$this, 'renderDashboardPage'],             // Callback function
+			'dashicons-images-alt2',                    // Icon (Dashicons or URL)
+			20                                          // Position
 		);
 	}
 
@@ -26,8 +25,8 @@ class Menu {
 			id='apbDashboard'
 			data-info='<?php echo esc_attr( wp_json_encode( [
 				'version' => PSB_VERSION,
-				'isPremium' => psIsPremium(),
-				'hasPro' => PARALLAX_HAS_PRO
+				'isPremium' => true,
+				'hasPro' => true
 			] ) ); ?>'
 		></div>
 	<?php }
