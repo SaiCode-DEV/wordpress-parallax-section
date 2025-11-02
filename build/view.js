@@ -1,1 +1,687 @@
-(()=>{"use strict";var t={338:(t,e,n)=>{var r=n(795);e.H=r.createRoot,r.hydrateRoot},795:t=>{t.exports=window.ReactDOM}},e={};const n=window.React;var r=function n(r){var a=e[r];if(void 0!==a)return a.exports;var o=e[r]={exports:{}};return t[r](o,o.exports,n),o.exports}(338);const a="linear-gradient(135deg, #0040E3, #18D4FD)",o=(t,e)=>{return null==(n=e)||""===n||Array.isArray(n)&&0===n.length||"object"==typeof n&&0===Object.keys(n).length||"string"==typeof n&&""===n.trim()||"number"==typeof n&&0===n?"":`${t}: ${e};`;var n},l=(t,e=!0,n=!0,r=!0)=>{const{type:l="solid",color:s="",gradient:i=a,image:c={},position:d="center center",attachment:m="",repeat:u="",size:p="",overlayColor:h=""}=t||{};return"gradient"===l&&n?o("background",i):"image"===l&&r?`background: url(${c?.url});\n\t\t\t\t${o("background-color",h)}\n\t\t\t\t${o("background-position",d)}\n\t\t\t\t${o("background-size",p)}\n\t\t\t\t${o("background-repeat",u)}\n\t\t\t\t${o("background-attachment",m)}\n\t\t\t\t${o("background-repeat",u)}\n\t\t\t\tbackground-blend-mode: overlay;`:e&&o("background",s)},s=t=>{const{side:e=2,vertical:n="0px",horizontal:r="0px",top:a="0px",right:o="0px",bottom:l="0px",left:s="0px"}=t||{};return 2===e?`${n} ${r}`:`${a} ${o} ${l} ${s}`},i=t=>{if(!t)return"";if("string"==typeof t)return t;if("object"==typeof t&&!Array.isArray(t)){const e=["top","right","bottom","left"];return e.map(e=>t[e]||"").every(t=>!t)?"":e.map(e=>t[e]||"0").join(" ")}return""},c=({attributes:t,id:e})=>{const{verticalAlign:r,textAlign:a,background:o,minHeight:c,padding:d,layout:m,styles:u={},selectedTheme:p}=t,h=`#${e}`,f=`${h} .BPBlurEffectParallax`,g=`${f} .hero`,b=`${f} .hero-bg`,$=`${h} .BPVerticalParallax .parallax-item`,y=`${h} .bpParticleParallax .hero-container`,w=`${y} .floating-cube`,v=`${h} .bplThreeImageParallax`,x=`${v} .parallax-hero`,E=`${v} .bg-top`,k=`${v} .bg-bottom`,N=`${v} #leaves-container svg`;return(0,n.createElement)("style",{dangerouslySetInnerHTML:{__html:`\n\n\t\t${"default"===p&&"\n\t\t\t\t.wp-block-psb-parallax{\n\t\t\t\t\tposition: relative;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t}\n\t\t"}\n\t\t\n\n\t\t${h}{\n\t\t\tmin-height: ${c};\n\t\t}\n\n\t\t${h} .psbParallaxSection{\n\t\t\tjustify-content: ${r};\n\t\t\ttext-align: ${a};\n\t\t\tmin-height: ${c};\n\t\t\tpadding: ${s(d)};\n\t\t}\n\t\t${h} .psbParallaxImg{\n\t\t\t${l(o)}\n\t\t}\n\n\n\n\t\t${g} {\n\t\t\tmin-height:${c};\n\t\t\tmax-width:${m?.width?.desktop};\n\t\t\tmargin:${i(m?.margin?.desktop)};\n\t\t\tpadding: ${s(d)};\n\t\t\ttext-align: ${a};\n\t\t\t}\n\t\n\t\t\t${b}{\n\t\t\t${l(o)}\n\t\t\t}\n\t\n\t\t\t\t@media (max-width: 480px){\n\t\t\t\t}\n\n\t\t\t\t${$}{\n\t\t\t\t\t${l(o)}\n\t\t\t\t\twidth:${m?.width?.desktop};\n\t\t\t\t\tmin-height:${c};\n\t\t\t\t\tpadding: ${s(d)};\n\t\t\t\t\tmargin:${i(m?.margin?.desktop)};\n\t\t\t\t\ttext-align: ${a};\n\t\t\t\t}\n\t\t\n\t\n\t\n\t\t\t\t@media (max-width: 480px){\n\t\t\t\t}\n\n\n\t\t\t\t${y}{\n\t\t\t\t\t${l(o)}\n\t\t\t\t\twidth:${m?.width?.desktop};\n\t\t\t\t\tmin-height:${c};\n\t\t\t\t\tmargin:${i(m?.margin?.desktop)};\n\t\t\t\t\tpadding: ${s(d)};\n\t\t\t\t\ttext-align: ${a};\n\t\t\t\t}\n\n\t\t\t\t${w}{\n\t\t\t\t\t\ttop: ${u?.cube?.position?.x?.desktop};\n\t\t\t\t\t\tright: ${u?.cube?.position?.y?.desktop};;\n\t\t\t\t}\n\n\t\t\t\t${w} .front {\n\t\t\t\t\tbackground: ${u?.cube?.front};\n\t\t\t\t}\n\t\t\t\t${w} .back {\n\t\t\t\t\tbackground: ${u?.cube?.back};\n\t\t\t\t}\n\t\t\t\t${w} .top {\n\t\t\t\t\tbackground: ${u?.cube?.top};\n\t\t\t\t}\n\t\t\t\t${w} .bottom {\n\t\t\t\t\tbackground: ${u?.cube?.bottom};\n\t\t\t\t}\n\t\t\t\t${w} .left {\n\t\t\t\t\tbackground: ${u?.cube?.left};\n\t\t\t\t}\n\t\t\t\t${w} .right {\n\t\t\t\t\tbackground: ${u?.cube?.right};\n\t\t\t\t}\n\n\t\t\t\t@media  (min-width:641px) and (max-width: 1024px){\n\n\t\t\t\t\t${w}{\n\t\t\t\t\t\ttop: ${u?.cube?.position?.x?.tablet};\n\t\t\t\t\t\tright: ${u?.cube?.position?.y?.tablet};;\n\t\t\t\t\t}\n\t\t\t\t} \n\t\t\n\t\n\t\n\t\t\t\t@media (max-width: 480px){\n\n\t\t\t\t\t\t${w}{\n\t\t\t\t\t\t\ttop: ${u?.cube?.position?.x?.mobile};\n\t\t\t\t\t\t\tright: ${u?.cube?.position?.y?.mobile};;\n\t\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\t${x}{\n\t\t\t\t\twidth:${m?.width?.desktop};\n\t\t\t\t\tmin-height:${c};\n\t\t\t\t\tmargin:${i(m?.margin?.desktop)};\n\t\t\t\t\ttext-align: ${a};\n\t\t\t\t\tpadding: ${s(d)};\n\t\t\t\t}\n\n\t\t\t\t${E}{\n      \t\tbackground-color:${u?.t4Styles?.backgroundColors?.upper};\n\t\t\t\t}\n\t\t\t\t${k}{\n      \t\tbackground-color:${u?.t4Styles?.backgroundColors?.lower};\n\t\t\t\t}\n\n\t\t\t\t${N}{\n\t\t\t\tfill:${u?.leaf?.color};\n\t\t\t\t}\n\n\n\t\t\t\t@media (max-width: 480px){\n\t\t\t\t}\n\n\n\t\t`.replace(/\s+/g," ")}})},d=window.wp.blockEditor,m=()=>(0,n.createElement)(d.InnerBlocks,{template:[["core/heading",{content:"Parallax Section by bPlugins",style:{typography:{fontSize:"40px"},color:{text:"#fff"}}}],["core/paragraph",{content:"The Parallax effect is a modern web design technique where the background element scrolls slower than the foreground content. The parallax effect can be used on landing pages, long-form content, sales pages, or the homepage of a business website. It is a great way to highlight different sections on a lengthy page.",style:{typography:{fontSize:"20px"},color:{text:"#fff"}}}],["core/buttons",{contentJustification:"center",layout:{justifyContent:"center"}},[["core/button",{text:"Click Me",style:{typography:{fontSize:"30px"},color:{text:"#fff",gradient:"linear-gradient(135deg, #4527a4, #8344c5)"}}}]]]]}),u=()=>(0,n.createElement)("div",{className:"bpl-psb-view-update-modal"},(0,n.createElement)("div",{className:"container"},(0,n.createElement)("h3",{className:"heading"},"🚀 The parallax effect is a",(0,n.createElement)("span",null," Pro feature"),". Upgrade now to unlock this and other stunning effects."),(0,n.createElement)("button",{className:"btn",onClick:()=>{window.open("/wp-admin/tools.php?page=parallax-section-dashboard#/pricing","_blank","noopener,noreferrer")}},"🔒 Upgrade now"))),p=({isBackend:t=!1,children:e,isPremium:r})=>{const a=(0,n.useRef)(null),o=(0,n.useRef)(null),l=(0,n.useRef)(null);return(0,n.useEffect)(()=>{const t=a.current,e=o.current,n=l.current;if(!t||!e||!n)return;const r=()=>{const r=n.offsetTop,a=n.offsetHeight,o=window.scrollY-r;if(o<0)return t.style.transform="translateY(0px)",t.style.filter="blur(0px) brightness(1)",e.style.opacity="1",void(e.style.transform="translateY(0px)");t.style.transform=`translateY(${.5*o}px)`;const l=Math.min(o/a,1),s=8*l;t.style.filter=`blur(${s}px) brightness(${1-.4*l})`,e.style.opacity=1-.7*l,e.style.transform=`translateY(${50*l}px)`};return window.matchMedia("(prefers-reduced-motion: reduce)").matches?(t.style.transform="none",t.style.filter="none",e.style.opacity="1",void(e.style.transform="none")):(window.addEventListener("scroll",r),window.addEventListener("resize",r),r(),()=>{window.removeEventListener("scroll",r),window.removeEventListener("resize",r)})},[]),(0,n.createElement)("div",{className:"BPBlurEffectParallax"},(0,n.createElement)("section",{className:"hero",ref:l},!t&&!r&&(0,n.createElement)(u,null),(0,n.createElement)("div",{className:"hero-bg",ref:a}),(0,n.createElement)("div",{className:"hero-content",ref:o},(0,n.createElement)(m,null),(0,n.createElement)("div",{className:"psb-theme1-wrapper"},(0,n.createElement)("div",{className:"psb-theme1-overlay"}),(0,n.createElement)("div",{className:"psb-theme1-content"},e)))))},h=(t,e,n=!1)=>{const r=parseFloat(t?.dataset?.speed)||-1,a=n||window.scrollY,o=window.innerHeight,l=e?.clientHeight,s=e?.offsetTop,i=a+o;if(i>s&&a<s+l){let e=(i-s)*r/(o+l)*100+(50-50*r);t.style.top=e+"%",t.style.transform="translate(-50%, -"+e+"%)"}},f=({isBackend:t=!1,children:e,isPremium:r})=>{const a=(0,n.useRef)(null);return(0,n.createElement)("section",{className:"BPVerticalParallax"},!t&&!r&&(0,n.createElement)(u,null),(0,n.createElement)("div",{ref:a,className:"parallax-item"},(0,n.createElement)(m,null),(0,n.createElement)("div",{className:"psb-theme1-wrapper"},(0,n.createElement)("div",{className:"psb-theme1-overlay"}),(0,n.createElement)("div",{className:"psb-theme1-content"},e))))},g=({attributes:t,isBackend:e=!1,isPremium:r,children:a})=>{const{options:o,styles:l}=t||{},{particles:s}=l||{},i=(0,n.useRef)(null),c=(0,n.useRef)(null);return(0,n.useEffect)(()=>{const t=i.current;if(!t)return;const e=t.getContext("2d");if(!e)return;let n=[],r=0,a=0;function o(){t.width=window.innerWidth,t.height=window.innerHeight+1500}function l(){const e=Math.floor(window.innerWidth/s.density);n=[];for(let r=0;r<e;r++){const e=5*Math.random()+1,r=Math.random()*t.width,a=Math.random()*t.height,o=Math.random()*`${s.movingSpeed}`-.25,l=Math.random()*`${s.movingSpeed}`-.25,i=`rgba(${s.color.r}, ${s.color.g}, ${s.color.b}, ${.5*Math.random()})`;n.push({x:r,y:a,size:e,speedX:o,speedY:l,color:i})}}const d=document.getElementById("main-container");if(d){const t=d.getBoundingClientRect();a=t.top+window.scrollY}else console.warn("main-container not found — maybe not rendered in this view");const m=()=>{r=window.scrollY-a,r<0&&(r=0)};window.addEventListener("scroll",m);const u=()=>{o(),l()};return window.addEventListener("resize",u),o(),l(),function a(){e.clearRect(0,0,t.width,t.height),n.forEach(n=>{n.x+=n.speedX,n.y+=n.speedY+2e-4*r,n.x<0&&(n.x=t.width),n.x>t.width&&(n.x=0),n.y<0&&(n.y=t.height),n.y>t.height&&(n.y=0),e.fillStyle=n.color,e.beginPath(),e.arc(n.x,n.y,n.size,0,2*Math.PI),e.fill()});for(let t=0;t<n.length;t++)for(let r=t+1;r<n.length;r++){const a=n[t].x-n[r].x,o=n[t].y-n[r].y,l=Math.sqrt(a*a+o*o);l<100&&(e.beginPath(),e.moveTo(n[t].x,n[t].y),e.lineTo(n[r].x,n[r].y),e.strokeStyle=`rgba(${s.color.r}, ${s.color.g}, ${s.color.b},${.3*(1-l/100)})`,e.lineWidth=1,e.stroke())}const o=document.getElementById("parallax-text");o&&(o.style.transform=`translateY(${.3*r}px)`);const l=c.current;l&&(l.style.transform=`translateY(${.33*r}px)`),t&&(t.style.transform=`translateY(${.3*-r}px)`);const i=document.getElementById("cube");if(i){const t=11+.4*r,e=23+.2*r;i.style.transform=`translateY(${.3*r}px) translateX(${.1*-r}px) rotateX(${-t}deg) rotateY(${-e}deg)`}requestAnimationFrame(a)}(),()=>{window.removeEventListener("scroll",m),window.removeEventListener("resize",u)}},[s]),(0,n.createElement)("div",{className:"bpParticleParallax"},!e&&!r&&(0,n.createElement)(u,null),(0,n.createElement)("div",{className:"hero-container",id:"main-container"},(0,n.createElement)("canvas",{ref:i,id:"particles-canvas"}),(0,n.createElement)("div",{className:"hero-content",ref:c},(0,n.createElement)(m,null),(0,n.createElement)("div",{className:"psb-theme1-wrapper"},(0,n.createElement)("div",{className:"psb-theme1-overlay"}),(0,n.createElement)("div",{className:"psb-theme1-content"},a))),o?.isCube&&(0,n.createElement)("div",{className:"floating-cube",id:"cube"},(0,n.createElement)("div",{className:"face front"}),(0,n.createElement)("div",{className:"face back"}),(0,n.createElement)("div",{className:"face top"}),(0,n.createElement)("div",{className:"face bottom"}),(0,n.createElement)("div",{className:"face left"}),(0,n.createElement)("div",{className:"face right"}))))},b=({attributes:t,isBackend:e=!1,children:r,isPremium:a})=>{const{styles:o}=t||[],l=(0,n.useRef)(null),s=(0,n.useRef)(null),i=(0,n.useRef)(null),c=(0,n.useRef)(null),d=(0,n.useRef)(null),p=(0,n.useRef)(null),h=(0,n.useRef)(null),f=(0,n.useRef)(null),g=(0,n.useRef)(null),b=(0,n.useRef)(null);return(0,n.useEffect)(()=>{const t=g.current;let e=0,n=0,r=!1;const a=o?.leaf?.count;for(let e=0;e<a;e++){const e=document.createElementNS("http://www.w3.org/2000/svg","svg");e.setAttribute("width","40"),e.setAttribute("height","40"),e.setAttribute("viewBox","0 0 24 24"),e.innerHTML='\n        <path d="M12 2C7 6 4 12 12 22C20 12 17 6 12 2Z" />\n        <path d="M12 2C12 8 12 16 12 22" stroke="#065f46" stroke-width="0.8" stroke-linecap="round"/>\n        <path d="M12 7 L9 8.5" stroke="#065f46" stroke-width="0.5" stroke-linecap="round"/>\n        <path d="M12 10 L8.5 12" stroke="#065f46" stroke-width="0.5" stroke-linecap="round"/>\n        <path d="M12 13 L9 15" stroke="#065f46" stroke-width="0.5" stroke-linecap="round"/>\n        <path d="M12 7 L15 8.5" stroke="#065f46" stroke-width="0.5" stroke-linecap="round"/>\n        <path d="M12 10 L15.5 12" stroke="#065f46" stroke-width="0.5" stroke-linecap="round"/>\n        <path d="M12 13 L15 15" stroke="#065f46" stroke-width="0.5" stroke-linecap="round"/>\n      ',e.style.position="absolute",e.style.left=100*Math.random()+"%",e.style.top=100*Math.random()+"%",e.dataset.speed=.1+.2*Math.random(),e.style.opacity=.2+.3*Math.random(),e.style.transform=`rotate(${360*Math.random()}deg)`,o?.leaf?.status&&t.appendChild(e)}const m=()=>{const t=l.current;if(t){const r=t.getBoundingClientRect();e=r.top+window.scrollY,n=r.height}};m();const u=()=>{const a=window.scrollY;if(r=a>=e&&a<=e+n,!r)return;const o=a-e;s.current&&(s.current.style.transform=`translateY(${.05*o}px)`),i.current&&(i.current.style.transform=`translateY(${.08*o}px)`),c.current&&(c.current.style.transform=`translateY(${.1*-o}px)`),d.current&&(d.current.style.transform=`translateY(${.05*o}px)`),p.current&&(p.current.style.transform=`rotate(-5deg) translateY(${.15*o}px)`),h.current&&(h.current.style.transform=`rotate(8deg) translateY(${.2*o}px)`),b.current&&(b.current.style.transform=`translateY(${-.32*o}px)`),f.current&&(f.current.style.opacity=Math.max(0,1-.01*o)),Array.from(t.children).forEach(t=>{const e=parseFloat(t.dataset.speed);t.style.transform=`translateY(${o*e}px) rotate(${360*Math.random()}deg)`})},$=()=>{m()};return window.addEventListener("scroll",u),window.addEventListener("resize",$),()=>{window.removeEventListener("scroll",u),window.removeEventListener("resize",$),t&&(t.innerHTML="")}},[o?.leaf?.count,o?.leaf?.status]),(0,n.createElement)(n.Fragment,null,(0,n.createElement)("div",{className:"bplThreeImageParallax",ref:l},!e&&!a&&(0,n.createElement)(u,null),(0,n.createElement)("div",{className:"parallax-hero"},(0,n.createElement)("div",{className:"bg-layer bg-top",ref:s}),(0,n.createElement)("div",{className:"bg-layer bg-bottom",ref:i}),o?.leaf?.status&&(0,n.createElement)("div",{id:"leaves-container",ref:g}),(0,n.createElement)("div",{className:"hero-content",ref:b},(0,n.createElement)(m,null),(0,n.createElement)("div",{className:"psb-theme1-wrapper"},(0,n.createElement)("div",{className:"psb-theme1-overlay"}),(0,n.createElement)("div",{className:"psb-theme1-content"},r))))))};document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll(".wp-block-psb-parallax").forEach(t=>{const e=t.querySelector(".psbParallaxImg"),a=JSON.parse(t.dataset.attributes),o=JSON.parse(t.dataset.pipecheck),{selectedTheme:l}=a,s=t.className,i=t.innerHTML,d=document.createElement("div");if(d.innerHTML=i,"default"!=l&&(d.querySelectorAll("style").forEach(t=>t.remove()),d.querySelectorAll(".psbParallaxImg").forEach(t=>t.remove())),"default"!=l){const e=d.innerHTML;t.innerHTML="",(0,r.H)(t).render((0,n.createElement)("div",{className:s,id:t.id},(0,n.createElement)(c,{attributes:a,id:t.id,isPremium:o}),(()=>{switch(l){case"theme1":return(0,n.createElement)(p,{attributes:a,isPremium:o},(0,n.createElement)("div",{dangerouslySetInnerHTML:{__html:e}}));case"theme2":return(0,n.createElement)(f,{attributes:a,isPremium:o},(0,n.createElement)("div",{dangerouslySetInnerHTML:{__html:e}}));case"theme3":return(0,n.createElement)(g,{attributes:a,isPremium:o},(0,n.createElement)("div",{dangerouslySetInnerHTML:{__html:e}}));case"theme4":return(0,n.createElement)(b,{attributes:a,isPremium:o},(0,n.createElement)("div",{dangerouslySetInnerHTML:{__html:e}}));default:return(0,n.createElement)("div",{dangerouslySetInnerHTML:{__html:e}})}})()))}if(e){const o=document.createElement("div");t.insertBefore(o,t.firstChild),(0,r.H)(o).render((0,n.createElement)(c,{attributes:a,id:t.id})),e&&(h(e,e.parentElement),document.addEventListener("scroll",()=>{h(e,e.parentElement)}))}})})})();
+(() => {
+  "use strict";
+  var t = {
+      338: (t, e, n) => {
+        var r = n(795);
+        (e.H = r.createRoot), r.hydrateRoot;
+      },
+      795: (t) => {
+        t.exports = window.ReactDOM;
+      },
+    },
+    e = {};
+  const n = window.React;
+  var r = (function n(r) {
+    var a = e[r];
+    if (void 0 !== a) return a.exports;
+    var o = (e[r] = { exports: {} });
+    return t[r](o, o.exports, n), o.exports;
+  })(338);
+  const a = "linear-gradient(135deg, #0040E3, #18D4FD)",
+    o = (t, e) => {
+      return null == (n = e) ||
+        "" === n ||
+        (Array.isArray(n) && 0 === n.length) ||
+        ("object" == typeof n && 0 === Object.keys(n).length) ||
+        ("string" == typeof n && "" === n.trim()) ||
+        ("number" == typeof n && 0 === n)
+        ? ""
+        : `${t}: ${e};`;
+      var n;
+    },
+    l = (t, e = !0, n = !0, r = !0) => {
+      const {
+        type: l = "solid",
+        color: s = "",
+        gradient: i = a,
+        image: c = {},
+        position: d = "center center",
+        attachment: m = "",
+        repeat: u = "",
+        size: p = "",
+        overlayColor: h = "",
+      } = t || {};
+      return "gradient" === l && n
+        ? o("background", i)
+        : "image" === l && r
+        ? `background: url(${c?.url});\n\t\t\t\t${o(
+            "background-color",
+            h
+          )}\n\t\t\t\t${o("background-position", d)}\n\t\t\t\t${o(
+            "background-size",
+            p
+          )}\n\t\t\t\t${o("background-repeat", u)}\n\t\t\t\t${o(
+            "background-attachment",
+            m
+          )}\n\t\t\t\t${o(
+            "background-repeat",
+            u
+          )}\n\t\t\t\tbackground-blend-mode: overlay;`
+        : e && o("background", s);
+    },
+    s = (t) => {
+      const {
+        side: e = 2,
+        vertical: n = "0px",
+        horizontal: r = "0px",
+        top: a = "0px",
+        right: o = "0px",
+        bottom: l = "0px",
+        left: s = "0px",
+      } = t || {};
+      return 2 === e ? `${n} ${r}` : `${a} ${o} ${l} ${s}`;
+    },
+    i = (t) => {
+      if (!t) return "";
+      if ("string" == typeof t) return t;
+      if ("object" == typeof t && !Array.isArray(t)) {
+        const e = ["top", "right", "bottom", "left"];
+        return e.map((e) => t[e] || "").every((t) => !t)
+          ? ""
+          : e.map((e) => t[e] || "0").join(" ");
+      }
+      return "";
+    },
+    c = ({ attributes: t, id: e }) => {
+      const {
+          verticalAlign: r,
+          textAlign: a,
+          background: o,
+          minHeight: c,
+          padding: d,
+          layout: m,
+          styles: u = {},
+          selectedTheme: p,
+        } = t,
+        h = `#${e}`,
+        f = `${h} .BPBlurEffectParallax`,
+        g = `${f} .hero`,
+        b = `${f} .hero-bg`,
+        $ = `${h} .BPVerticalParallax .parallax-item`,
+        y = `${h} .bpParticleParallax .hero-container`,
+        w = `${y} .floating-cube`,
+        v = `${h} .bplThreeImageParallax`,
+        x = `${v} .parallax-hero`,
+        E = `${v} .bg-top`,
+        k = `${v} .bg-bottom`,
+        N = `${v} #leaves-container svg`;
+      return (0, n.createElement)("style", {
+        dangerouslySetInnerHTML: {
+          __html: `\n\n\t\t${
+            "default" === p &&
+            "\n\t\t\t\t.wp-block-psb-parallax{\n\t\t\t\t\tposition: relative;\n\t\t\t\t\toverflow: hidden;\n\t\t\t\t}\n\t\t"
+          }\n\t\t\n\n\t\t${h}{\n\t\t\tmin-height: ${c};\n\t\t}\n\n\t\t${h} .psbParallaxSection{\n\t\t\tjustify-content: ${r};\n\t\t\ttext-align: ${a};\n\t\t\tmin-height: ${c};\n\t\t\tpadding: ${s(
+            d
+          )};\n\t\t}\n\t\t${h} .psbParallaxImg{\n\t\t\t${l(
+            o
+          )}\n\t\t}\n\n\n\n\t\t${g} {\n\t\t\tmin-height:${c};\n\t\t\tmax-width:${
+            m?.width?.desktop
+          };\n\t\t\tmargin:${i(m?.margin?.desktop)};\n\t\t\tpadding: ${s(
+            d
+          )};\n\t\t\ttext-align: ${a};\n\t\t\t}\n\t\n\t\t\t${b}{\n\t\t\t${l(
+            o
+          )}\n\t\t\t}\n\t\n\t\t\t\t@media (max-width: 480px){\n\t\t\t\t}\n\n\t\t\t\t${$}{\n\t\t\t\t\t${l(
+            o
+          )}\n\t\t\t\t\twidth:${
+            m?.width?.desktop
+          };\n\t\t\t\t\tmin-height:${c};\n\t\t\t\t\tpadding: ${s(
+            d
+          )};\n\t\t\t\t\tmargin:${i(
+            m?.margin?.desktop
+          )};\n\t\t\t\t\ttext-align: ${a};\n\t\t\t\t}\n\t\t\n\t\n\t\n\t\t\t\t@media (max-width: 480px){\n\t\t\t\t}\n\n\n\t\t\t\t${y}{\n\t\t\t\t\t${l(
+            o
+          )}\n\t\t\t\t\twidth:${
+            m?.width?.desktop
+          };\n\t\t\t\t\tmin-height:${c};\n\t\t\t\t\tmargin:${i(
+            m?.margin?.desktop
+          )};\n\t\t\t\t\tpadding: ${s(
+            d
+          )};\n\t\t\t\t\ttext-align: ${a};\n\t\t\t\t}\n\n\t\t\t\t${w}{\n\t\t\t\t\t\ttop: ${
+            u?.cube?.position?.x?.desktop
+          };\n\t\t\t\t\t\tright: ${
+            u?.cube?.position?.y?.desktop
+          };;\n\t\t\t\t}\n\n\t\t\t\t${w} .front {\n\t\t\t\t\tbackground: ${
+            u?.cube?.front
+          };\n\t\t\t\t}\n\t\t\t\t${w} .back {\n\t\t\t\t\tbackground: ${
+            u?.cube?.back
+          };\n\t\t\t\t}\n\t\t\t\t${w} .top {\n\t\t\t\t\tbackground: ${
+            u?.cube?.top
+          };\n\t\t\t\t}\n\t\t\t\t${w} .bottom {\n\t\t\t\t\tbackground: ${
+            u?.cube?.bottom
+          };\n\t\t\t\t}\n\t\t\t\t${w} .left {\n\t\t\t\t\tbackground: ${
+            u?.cube?.left
+          };\n\t\t\t\t}\n\t\t\t\t${w} .right {\n\t\t\t\t\tbackground: ${
+            u?.cube?.right
+          };\n\t\t\t\t}\n\n\t\t\t\t@media  (min-width:641px) and (max-width: 1024px){\n\n\t\t\t\t\t${w}{\n\t\t\t\t\t\ttop: ${
+            u?.cube?.position?.x?.tablet
+          };\n\t\t\t\t\t\tright: ${
+            u?.cube?.position?.y?.tablet
+          };;\n\t\t\t\t\t}\n\t\t\t\t} \n\t\t\n\t\n\t\n\t\t\t\t@media (max-width: 480px){\n\n\t\t\t\t\t\t${w}{\n\t\t\t\t\t\t\ttop: ${
+            u?.cube?.position?.x?.mobile
+          };\n\t\t\t\t\t\t\tright: ${
+            u?.cube?.position?.y?.mobile
+          };;\n\t\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\t${x}{\n\t\t\t\t\twidth:${
+            m?.width?.desktop
+          };\n\t\t\t\t\tmin-height:${c};\n\t\t\t\t\tmargin:${i(
+            m?.margin?.desktop
+          )};\n\t\t\t\t\ttext-align: ${a};\n\t\t\t\t\tpadding: ${s(
+            d
+          )};\n\t\t\t\t}\n\n\t\t\t\t${E}{\n      \t\tbackground-color:${
+            u?.t4Styles?.backgroundColors?.upper
+          };\n\t\t\t\t}\n\t\t\t\t${k}{\n      \t\tbackground-color:${
+            u?.t4Styles?.backgroundColors?.lower
+          };\n\t\t\t\t}\n\n\t\t\t\t${N}{\n\t\t\t\tfill:${
+            u?.leaf?.color
+          };\n\t\t\t\t}\n\n\n\t\t\t\t@media (max-width: 480px){\n\t\t\t\t}\n\n\n\t\t`.replace(
+            /\s+/g,
+            " "
+          ),
+        },
+      });
+    },
+    d = window.wp.blockEditor,
+    m = () =>
+      (0, n.createElement)(d.InnerBlocks, {
+        template: [
+          [
+            "core/heading",
+            {
+              content: "Parallax Section by bPlugins",
+              style: {
+                typography: { fontSize: "40px" },
+                color: { text: "#fff" },
+              },
+            },
+          ],
+          [
+            "core/paragraph",
+            {
+              content:
+                "The Parallax effect is a modern web design technique where the background element scrolls slower than the foreground content. The parallax effect can be used on landing pages, long-form content, sales pages, or the homepage of a business website. It is a great way to highlight different sections on a lengthy page.",
+              style: {
+                typography: { fontSize: "20px" },
+                color: { text: "#fff" },
+              },
+            },
+          ],
+          [
+            "core/buttons",
+            {
+              contentJustification: "center",
+              layout: { justifyContent: "center" },
+            },
+            [
+              [
+                "core/button",
+                {
+                  text: "Click Me",
+                  style: {
+                    typography: { fontSize: "30px" },
+                    color: {
+                      text: "#fff",
+                      gradient: "linear-gradient(135deg, #4527a4, #8344c5)",
+                    },
+                  },
+                },
+              ],
+            ],
+          ],
+        ],
+      }),
+
+    p = ({ isBackend: t = !1, children: e, isPremium: r }) => {
+      const a = (0, n.useRef)(null),
+        o = (0, n.useRef)(null),
+        l = (0, n.useRef)(null);
+      return (
+        (0, n.useEffect)(() => {
+          const t = a.current,
+            e = o.current,
+            n = l.current;
+          if (!t || !e || !n) return;
+          const r = () => {
+            const r = n.offsetTop,
+              a = n.offsetHeight,
+              o = window.scrollY - r;
+            if (o < 0)
+              return (
+                (t.style.transform = "translateY(0px)"),
+                (t.style.filter = "blur(0px) brightness(1)"),
+                (e.style.opacity = "1"),
+                void (e.style.transform = "translateY(0px)")
+              );
+            t.style.transform = `translateY(${0.5 * o}px)`;
+            const l = Math.min(o / a, 1),
+              s = 8 * l;
+            (t.style.filter = `blur(${s}px) brightness(${1 - 0.4 * l})`),
+              (e.style.opacity = 1 - 0.7 * l),
+              (e.style.transform = `translateY(${50 * l}px)`);
+          };
+          return window.matchMedia("(prefers-reduced-motion: reduce)").matches
+            ? ((t.style.transform = "none"),
+              (t.style.filter = "none"),
+              (e.style.opacity = "1"),
+              void (e.style.transform = "none"))
+            : (window.addEventListener("scroll", r),
+              window.addEventListener("resize", r),
+              r(),
+              () => {
+                window.removeEventListener("scroll", r),
+                  window.removeEventListener("resize", r);
+              });
+        }, []),
+        (0, n.createElement)(
+          "div",
+          { className: "BPBlurEffectParallax" },
+          (0, n.createElement)(
+            "section",
+            { className: "hero", ref: l },
+            (0, n.createElement)("div", { className: "hero-bg", ref: a }),
+            (0, n.createElement)(
+              "div",
+              { className: "hero-content", ref: o },
+              (0, n.createElement)(m, null),
+              (0, n.createElement)(
+                "div",
+                { className: "psb-theme1-wrapper" },
+                (0, n.createElement)("div", {
+                  className: "psb-theme1-overlay",
+                }),
+                (0, n.createElement)(
+                  "div",
+                  { className: "psb-theme1-content" },
+                  e
+                )
+              )
+            )
+          )
+        )
+      );
+    },
+    h = (t, e, n = !1) => {
+      const r = parseFloat(t?.dataset?.speed) || -1,
+        a = n || window.scrollY,
+        o = window.innerHeight,
+        l = e?.clientHeight,
+        s = e?.offsetTop,
+        i = a + o;
+      if (i > s && a < s + l) {
+        let e = (((i - s) * r) / (o + l)) * 100 + (50 - 50 * r);
+        (t.style.top = e + "%"),
+          (t.style.transform = "translate(-50%, -" + e + "%)");
+      }
+    },
+    f = ({ isBackend: t = !1, children: e, isPremium: r }) => {
+      const a = (0, n.useRef)(null);
+      return (0, n.createElement)(
+        "section",
+        { className: "BPVerticalParallax" },
+        (0, n.createElement)(
+          "div",
+          { ref: a, className: "parallax-item" },
+          (0, n.createElement)(m, null),
+          (0, n.createElement)(
+            "div",
+            { className: "psb-theme1-wrapper" },
+            (0, n.createElement)("div", { className: "psb-theme1-overlay" }),
+            (0, n.createElement)("div", { className: "psb-theme1-content" }, e)
+          )
+        )
+      );
+    },
+    g = ({ attributes: t, isBackend: e = !1, isPremium: r, children: a }) => {
+      const { options: o, styles: l } = t || {},
+        { particles: s } = l || {},
+        i = (0, n.useRef)(null),
+        c = (0, n.useRef)(null);
+      return (
+        (0, n.useEffect)(() => {
+          const t = i.current;
+          if (!t) return;
+          const e = t.getContext("2d");
+          if (!e) return;
+          let n = [],
+            r = 0,
+            a = 0;
+          function o() {
+            (t.width = window.innerWidth),
+              (t.height = window.innerHeight + 1500);
+          }
+          function l() {
+            const e = Math.floor(window.innerWidth / s.density);
+            n = [];
+            for (let r = 0; r < e; r++) {
+              const e = 5 * Math.random() + 1,
+                r = Math.random() * t.width,
+                a = Math.random() * t.height,
+                o = Math.random() * `${s.movingSpeed}` - 0.25,
+                l = Math.random() * `${s.movingSpeed}` - 0.25,
+                i = `rgba(${s.color.r}, ${s.color.g}, ${s.color.b}, ${
+                  0.5 * Math.random()
+                })`;
+              n.push({ x: r, y: a, size: e, speedX: o, speedY: l, color: i });
+            }
+          }
+          const d = document.getElementById("main-container");
+          if (d) {
+            const t = d.getBoundingClientRect();
+            a = t.top + window.scrollY;
+          } else
+            console.warn(
+              "main-container not found — maybe not rendered in this view"
+            );
+          const m = () => {
+            (r = window.scrollY - a), r < 0 && (r = 0);
+          };
+          window.addEventListener("scroll", m);
+          const u = () => {
+            o(), l();
+          };
+          return (
+            window.addEventListener("resize", u),
+            o(),
+            l(),
+            (function a() {
+              e.clearRect(0, 0, t.width, t.height),
+                n.forEach((n) => {
+                  (n.x += n.speedX),
+                    (n.y += n.speedY + 2e-4 * r),
+                    n.x < 0 && (n.x = t.width),
+                    n.x > t.width && (n.x = 0),
+                    n.y < 0 && (n.y = t.height),
+                    n.y > t.height && (n.y = 0),
+                    (e.fillStyle = n.color),
+                    e.beginPath(),
+                    e.arc(n.x, n.y, n.size, 0, 2 * Math.PI),
+                    e.fill();
+                });
+              for (let t = 0; t < n.length; t++)
+                for (let r = t + 1; r < n.length; r++) {
+                  const a = n[t].x - n[r].x,
+                    o = n[t].y - n[r].y,
+                    l = Math.sqrt(a * a + o * o);
+                  l < 100 &&
+                    (e.beginPath(),
+                    e.moveTo(n[t].x, n[t].y),
+                    e.lineTo(n[r].x, n[r].y),
+                    (e.strokeStyle = `rgba(${s.color.r}, ${s.color.g}, ${
+                      s.color.b
+                    },${0.3 * (1 - l / 100)})`),
+                    (e.lineWidth = 1),
+                    e.stroke());
+                }
+              const o = document.getElementById("parallax-text");
+              o && (o.style.transform = `translateY(${0.3 * r}px)`);
+              const l = c.current;
+              l && (l.style.transform = `translateY(${0.33 * r}px)`),
+                t && (t.style.transform = `translateY(${0.3 * -r}px)`);
+              const i = document.getElementById("cube");
+              if (i) {
+                const t = 11 + 0.4 * r,
+                  e = 23 + 0.2 * r;
+                i.style.transform = `translateY(${0.3 * r}px) translateX(${
+                  0.1 * -r
+                }px) rotateX(${-t}deg) rotateY(${-e}deg)`;
+              }
+              requestAnimationFrame(a);
+            })(),
+            () => {
+              window.removeEventListener("scroll", m),
+                window.removeEventListener("resize", u);
+            }
+          );
+        }, [s]),
+        (0, n.createElement)(
+          "div",
+          { className: "bpParticleParallax" },
+          (0, n.createElement)(
+            "div",
+            { className: "hero-container", id: "main-container" },
+            (0, n.createElement)("canvas", { ref: i, id: "particles-canvas" }),
+            (0, n.createElement)(
+              "div",
+              { className: "hero-content", ref: c },
+              (0, n.createElement)(m, null),
+              (0, n.createElement)(
+                "div",
+                { className: "psb-theme1-wrapper" },
+                (0, n.createElement)("div", {
+                  className: "psb-theme1-overlay",
+                }),
+                (0, n.createElement)(
+                  "div",
+                  { className: "psb-theme1-content" },
+                  a
+                )
+              )
+            ),
+            o?.isCube &&
+              (0, n.createElement)(
+                "div",
+                { className: "floating-cube", id: "cube" },
+                (0, n.createElement)("div", { className: "face front" }),
+                (0, n.createElement)("div", { className: "face back" }),
+                (0, n.createElement)("div", { className: "face top" }),
+                (0, n.createElement)("div", { className: "face bottom" }),
+                (0, n.createElement)("div", { className: "face left" }),
+                (0, n.createElement)("div", { className: "face right" })
+              )
+          )
+        )
+      );
+    },
+    b = ({ attributes: t, isBackend: e = !1, children: r, isPremium: a }) => {
+      const { styles: o } = t || [],
+        l = (0, n.useRef)(null),
+        s = (0, n.useRef)(null),
+        i = (0, n.useRef)(null),
+        c = (0, n.useRef)(null),
+        d = (0, n.useRef)(null),
+        p = (0, n.useRef)(null),
+        h = (0, n.useRef)(null),
+        f = (0, n.useRef)(null),
+        g = (0, n.useRef)(null),
+        b = (0, n.useRef)(null);
+      return (
+        (0, n.useEffect)(() => {
+          const t = g.current;
+          let e = 0,
+            n = 0,
+            r = !1;
+          const a = o?.leaf?.count;
+          for (let e = 0; e < a; e++) {
+            const e = document.createElementNS(
+              "http://www.w3.org/2000/svg",
+              "svg"
+            );
+            e.setAttribute("width", "40"),
+              e.setAttribute("height", "40"),
+              e.setAttribute("viewBox", "0 0 24 24"),
+              (e.innerHTML =
+                '\n        <path d="M12 2C7 6 4 12 12 22C20 12 17 6 12 2Z" />\n        <path d="M12 2C12 8 12 16 12 22" stroke="#065f46" stroke-width="0.8" stroke-linecap="round"/>\n        <path d="M12 7 L9 8.5" stroke="#065f46" stroke-width="0.5" stroke-linecap="round"/>\n        <path d="M12 10 L8.5 12" stroke="#065f46" stroke-width="0.5" stroke-linecap="round"/>\n        <path d="M12 13 L9 15" stroke="#065f46" stroke-width="0.5" stroke-linecap="round"/>\n        <path d="M12 7 L15 8.5" stroke="#065f46" stroke-width="0.5" stroke-linecap="round"/>\n        <path d="M12 10 L15.5 12" stroke="#065f46" stroke-width="0.5" stroke-linecap="round"/>\n        <path d="M12 13 L15 15" stroke="#065f46" stroke-width="0.5" stroke-linecap="round"/>\n      '),
+              (e.style.position = "absolute"),
+              (e.style.left = 100 * Math.random() + "%"),
+              (e.style.top = 100 * Math.random() + "%"),
+              (e.dataset.speed = 0.1 + 0.2 * Math.random()),
+              (e.style.opacity = 0.2 + 0.3 * Math.random()),
+              (e.style.transform = `rotate(${360 * Math.random()}deg)`),
+              o?.leaf?.status && t.appendChild(e);
+          }
+          const m = () => {
+            const t = l.current;
+            if (t) {
+              const r = t.getBoundingClientRect();
+              (e = r.top + window.scrollY), (n = r.height);
+            }
+          };
+          m();
+          const u = () => {
+              const a = window.scrollY;
+              if (((r = a >= e && a <= e + n), !r)) return;
+              const o = a - e;
+              s.current &&
+                (s.current.style.transform = `translateY(${0.05 * o}px)`),
+                i.current &&
+                  (i.current.style.transform = `translateY(${0.08 * o}px)`),
+                c.current &&
+                  (c.current.style.transform = `translateY(${0.1 * -o}px)`),
+                d.current &&
+                  (d.current.style.transform = `translateY(${0.05 * o}px)`),
+                p.current &&
+                  (p.current.style.transform = `rotate(-5deg) translateY(${
+                    0.15 * o
+                  }px)`),
+                h.current &&
+                  (h.current.style.transform = `rotate(8deg) translateY(${
+                    0.2 * o
+                  }px)`),
+                b.current &&
+                  (b.current.style.transform = `translateY(${-0.32 * o}px)`),
+                f.current &&
+                  (f.current.style.opacity = Math.max(0, 1 - 0.01 * o)),
+                Array.from(t.children).forEach((t) => {
+                  const e = parseFloat(t.dataset.speed);
+                  t.style.transform = `translateY(${o * e}px) rotate(${
+                    360 * Math.random()
+                  }deg)`;
+                });
+            },
+            $ = () => {
+              m();
+            };
+          return (
+            window.addEventListener("scroll", u),
+            window.addEventListener("resize", $),
+            () => {
+              window.removeEventListener("scroll", u),
+                window.removeEventListener("resize", $),
+                t && (t.innerHTML = "");
+            }
+          );
+        }, [o?.leaf?.count, o?.leaf?.status]),
+        (0, n.createElement)(
+          n.Fragment,
+          null,
+          (0, n.createElement)(
+            "div",
+            { className: "bplThreeImageParallax", ref: l },
+            (0, n.createElement)(
+              "div",
+              { className: "parallax-hero" },
+              (0, n.createElement)("div", {
+                className: "bg-layer bg-top",
+                ref: s,
+              }),
+              (0, n.createElement)("div", {
+                className: "bg-layer bg-bottom",
+                ref: i,
+              }),
+              o?.leaf?.status &&
+                (0, n.createElement)("div", { id: "leaves-container", ref: g }),
+              (0, n.createElement)(
+                "div",
+                { className: "hero-content", ref: b },
+                (0, n.createElement)(m, null),
+                (0, n.createElement)(
+                  "div",
+                  { className: "psb-theme1-wrapper" },
+                  (0, n.createElement)("div", {
+                    className: "psb-theme1-overlay",
+                  }),
+                  (0, n.createElement)(
+                    "div",
+                    { className: "psb-theme1-content" },
+                    r
+                  )
+                )
+              )
+            )
+          )
+        )
+      );
+    };
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".wp-block-psb-parallax").forEach((t) => {
+      const e = t.querySelector(".psbParallaxImg"),
+        a = JSON.parse(t.dataset.attributes),
+        o = JSON.parse(t.dataset.pipecheck),
+        { selectedTheme: l } = a,
+        s = t.className,
+        i = t.innerHTML,
+        d = document.createElement("div");
+      if (
+        ((d.innerHTML = i),
+        "default" != l &&
+          (d.querySelectorAll("style").forEach((t) => t.remove()),
+          d.querySelectorAll(".psbParallaxImg").forEach((t) => t.remove())),
+        "default" != l)
+      ) {
+        const e = d.innerHTML;
+        (t.innerHTML = ""),
+          (0, r.H)(t).render(
+            (0, n.createElement)(
+              "div",
+              { className: s, id: t.id },
+              (0, n.createElement)(c, {
+                attributes: a,
+                id: t.id,
+                isPremium: o,
+              }),
+              (() => {
+                switch (l) {
+                  case "theme1":
+                    return (0, n.createElement)(
+                      p,
+                      { attributes: a, isPremium: o },
+                      (0, n.createElement)("div", {
+                        dangerouslySetInnerHTML: { __html: e },
+                      })
+                    );
+                  case "theme2":
+                    return (0, n.createElement)(
+                      f,
+                      { attributes: a, isPremium: o },
+                      (0, n.createElement)("div", {
+                        dangerouslySetInnerHTML: { __html: e },
+                      })
+                    );
+                  case "theme3":
+                    return (0, n.createElement)(
+                      g,
+                      { attributes: a, isPremium: o },
+                      (0, n.createElement)("div", {
+                        dangerouslySetInnerHTML: { __html: e },
+                      })
+                    );
+                  case "theme4":
+                    return (0, n.createElement)(
+                      b,
+                      { attributes: a, isPremium: o },
+                      (0, n.createElement)("div", {
+                        dangerouslySetInnerHTML: { __html: e },
+                      })
+                    );
+                  default:
+                    return (0, n.createElement)("div", {
+                      dangerouslySetInnerHTML: { __html: e },
+                    });
+                }
+              })()
+            )
+          );
+      }
+      if (e) {
+        const o = document.createElement("div");
+        t.insertBefore(o, t.firstChild),
+          (0, r.H)(o).render(
+            (0, n.createElement)(c, { attributes: a, id: t.id })
+          ),
+          e &&
+            (h(e, e.parentElement),
+            document.addEventListener("scroll", () => {
+              h(e, e.parentElement);
+            }));
+      }
+    });
+  });
+})();
