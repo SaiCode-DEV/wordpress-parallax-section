@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Parallax Section - Block
  * Description: Makes background element scrolls slower than foreground content.
- * Version: 1.0.9
+ * Version: 2.0.0
  * Author: bPlugins
  * Author URI: https://bplugins.com
  * License: GPLv3
@@ -29,7 +29,7 @@ if ( function_exists( 'ps_fs' ) ) {
      * DO NOT REMOVE THIS IF, IT IS ESSENTIAL FOR THE
      * `function_exists` CALL ABOVE TO PROPERLY WORK.
      */
-    define( 'PSB_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.0.9' ) );
+    define( 'PSB_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '2.0.0' ) );
     define( 'PSB_DIR_URL', plugin_dir_url( __FILE__ ) );
     define( 'PSB_DIR_PATH', plugin_dir_path( __FILE__ ) );
     define( 'PARALLAX_HAS_PRO', file_exists( dirname( __FILE__ ) . '/freemius/start.php' ) );
