@@ -1,0 +1,140 @@
+{
+  "apiVersion": 3,
+  "name": "psb/parallax",
+  "title": "Parallax Section",
+  "description": "Parallax scrolling effects in section.",
+  "category": "widgets",
+  "version": "2.0.0",
+  "keywords": [
+    "parallax scroll",
+    "background effect",
+    "scrolling effect",
+    "parallax section"
+  ],
+  "textdomain": "parallax-section",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    },
+    "speed": {
+      "type": "number",
+      "default": -1
+    },
+    "verticalAlign": {
+      "type": "string",
+      "default": "center"
+    },
+    "textAlign": {
+      "type": "string",
+      "default": "center"
+    },
+    "background": {
+      "type": "object",
+      "default": {
+        "type": "image",
+        "overlayColor": "rgba(0, 0, 0, 0.70)",
+        "position": "center center",
+        "image": {
+          "url": "https://i.imgur.com/n8bbzIE.jpeg"
+        },
+        "color": "#000",
+        "gradient": "linear-gradient(to bottom, #0f172a, #1e293b)",
+        "repeat": "no-repeat",
+        "size": "cover"
+      }
+    },
+    "minHeight": {
+      "type": "string",
+      "default": "700px"
+    },
+    "padding": {
+      "type": "object",
+      "default": {
+        "vertical": "20px",
+        "horizontal": "30px"
+      }
+    },
+    "styles": {
+      "type": "object",
+      "default": {
+        "particles": {
+          "color": {
+            "r": 255,
+            "g": 255,
+            "b": 255
+          },
+          "movingSpeed": 0.8,
+          "density": 10
+        },
+        "leaf": {
+          "status": true,
+          "color": "#16a34a",
+          "count": 20
+        },
+        "cube": {
+          "position": {
+            "x": {
+              "desktop": "47%",
+              "tablet": "40%",
+              "mobile": "42%"
+            },
+            "y": {
+              "desktop": "45%",
+              "tablet": "45%",
+              "mobile": "28%"
+            }
+          },
+          "front": "#60caf81a",
+          "back": "rgba(0, 136, 91, 0.1)",
+          "top": "rgba(7, 181, 255, 0.1)",
+          "bottom": "rgba(0, 241, 161, 0.1)",
+          "left": "rgba(56, 189, 248, 0.1)",
+          "right": "rgba(47, 255, 186, 0.1)",
+          "border": {
+            "width": "1px",
+            "type": "solid",
+            "color": ""
+          }
+        },
+        "t4Styles": {
+          "backgroundColors": {
+            "upper": "#f0fdf4",
+            "lower": "#dcfce7"
+          }
+        }
+      }
+    },
+    "options": {
+      "type": "object",
+      "default": {
+        "isCube": true
+      }
+    },
+    "selectedTheme": {
+      "type": "string",
+      "default": "default"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false
+  },
+  "example": {
+    "attributes": {
+      "preview": true,
+      "sourceType": "link"
+    }
+  },
+  "editorScript": [
+    "file:./index.js",
+    "wp-api"
+  ],
+  "editorStyle": "file:./index.css",
+  "style": "file:./view.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}
